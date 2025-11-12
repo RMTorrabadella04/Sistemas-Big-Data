@@ -9,6 +9,8 @@ El archivo contiene la función obtener_datos, diseñada para acceder a distinto
 
  - **Python 3.x** --> Cualquier versión de python de 3.x en adelante recomendada 3.13.8
 
+ - **Un gestor de base de datos** --> Sirve cualquiera que admita MySQL por ejemplo MySQL Workbench, HeidiSQL, etc 
+
 ###### LIBRERIAS EXTERNAS:
 
  - **pandas** → Permite manipular y analizar datos de manera eficiente usando estructuras como DataFrame y Series. Ideal para procesamiento de datos tabulares, limpieza, filtrado y exportación a CSV/Excel.
@@ -40,35 +42,11 @@ El archivo contiene la función obtener_datos, diseñada para acceder a distinto
  - Ejecutas: python -m pip install pandas requests mysql numpy
    
 ### Uso
-El uso principal se realiza mediante la función:
+El uso principal se realiza mediante el archivo de datos_puros.py. Este archivo recoge datos del INE y los mete en una base de datos.
 
-**obtener_datos(columnas=None, URL_API="URL_DEL_ENDPOINT")**
- - *__columnas__*: Lista opcional con los nombres de las columnas que se desea obtener. Si es None, devuelve todas las columnas.
+> 💡 **Aclaración:** El archivo Consulta.sql crea la base de datos y las tablas necesarias.
 
- - *__URL_API__*: URL del endpoint de la API del INE que quieres consultar.
 
-Ejemplos
-Consulta distintos tipos de datos del INE y filtra solo las columnas importantes ([Nombre, Anyo, Valor]):
 
-python
-URL1 = "https://servicios.ine.es/wstempus/jsCache/ES/DATOS_TABLA/25171"
-print(obtener_datos(columnas=["Nombre", "Anyo", "Valor"], URL_API=URL1).head())
 
-URL2 = "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/ECV3959?nult=100"
-print(obtener_datos(columnas=["Anyo", "Valor"], URL_API=URL2).head())
-
-URL3 = "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC251856?nult=100"
-print(obtener_datos(columnas=["Anyo", "Valor"], URL_API=URL3).head())
-
-### Funcionamiento
-Soporta automáticamente la estructura de datos devuelta por los diversos endpoints del INE.
-
-Añade metainformación de la serie en el DataFrame, como "Nombre", si está disponible.
-
-Permite seleccionar únicamente las columnas relevantes, facilitando análisis y visualización.
-
-### Notas Adicionales
-La función asume que las URLs proporcionadas devuelven una respuesta JSON en el formato esperado por la API.
-
-Si alguna de las columnas solicitadas no existe en los datos, simplemente se omite.
 
