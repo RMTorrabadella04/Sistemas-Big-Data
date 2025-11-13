@@ -27,7 +27,7 @@ El archivo contiene la función obtener_datos, diseñada para acceder a distinto
    
  - Ejecutas: **pip install pandas requests mysql numpy**
 
-  > 💡 **Otra Opción:** (Tienes que tener instalado "uv") uv add pandas requests mysql numpy
+  **Otra Opción:** (Tienes que tener instalado "uv") uv add pandas requests mysql numpy
    
 **De esta forma lo instalas en Python global**, si no quieres de esta manera puedes usar un entorno virtual y instalarlas ahí.
 
@@ -37,14 +37,14 @@ El archivo contiene la función obtener_datos, diseñada para acceder a distinto
    
  - Ejecutas: .venv\Script\activate
 
- > ⚠️ **Peligro:** Algunas veces no viene con pip instalado, si ese es el caso usa ejecuta esto: python -m ensurepip
+ **Peligro:** Algunas veces no viene con pip instalado, si ese es el caso usa ejecuta esto: python -m ensurepip
    
  - Ejecutas: python -m pip install pandas requests mysql numpy
    
 ### Uso
 El uso principal se realiza mediante el archivo de datos_puros.py. Este archivo recoge datos del INE y los mete en una base de datos.
 
-> 💡 **Aclaración:** El archivo Consulta.sql crea la base de datos y las tablas necesarias.
+**Aclaración:** El archivo Consulta.sql crea la base de datos y las tablas necesarias.
 
 
 
