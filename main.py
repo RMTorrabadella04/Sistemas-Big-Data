@@ -35,6 +35,7 @@ def conexionBBDD_SSH():
             port=tunnel.local_bind_port
         )
 
+
         cursor = db.cursor()
         
         tablas = ["ipv", "data_ipv", "ipc", "data_ipc"]
@@ -54,4 +55,9 @@ def conexionBBDD_SSH():
         return dfs
 
 if __name__ == "__main__":
-    conexionBBDD_SSH()
+    datos = conexionBBDD_SSH()
+    
+    df_ipc = datos['ipc']
+    df_datos_ipc = datos['datos_ipc']
+    df_ipv = datos['ipv']
+    df_datos_ipv = datos['datos_ipv']
