@@ -57,8 +57,8 @@ def conexionBBDD_SSH():
 if __name__ == "__main__":
     datos = conexionBBDD_SSH()
     
+
     df_ipc = datos['ipc']
     df_datos_ipc = datos['datos_ipc']
     df_ipv = datos['ipv']
     df_datos_ipv = datos['datos_ipv']
-    
