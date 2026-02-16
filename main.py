@@ -61,3 +61,4 @@ if __name__ == "__main__":
     df_datos_ipc = datos['datos_ipc']
     df_ipv = datos['ipv']
     df_datos_ipv = datos['datos_ipv']
+    
