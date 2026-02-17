@@ -6,6 +6,10 @@ if not hasattr(paramiko, 'DSSKey'):
 from sshtunnel import SSHTunnelForwarder
 import pymysql
 import polars as pl
+import plotly.express as px
+import plotly.graph_objects as go
+import pandas as pd
+import requests
 from datetime import datetime
 
 
@@ -73,9 +77,10 @@ def verificarDatos(dfs):
                     return_dtype=pl.Datetime
                 ).alias('Fecha')
             )
+            dfs[nombre] = df
         print(df.head())
-
-
+    
+    return dfs
 
 def milisegundos_a_fecha(ms, tz=None):
     ms = int(ms)
@@ -90,11 +95,116 @@ def milisegundos_a_fecha(ms, tz=None):
     except (OverflowError, OSError) as e:
         raise ValueError(f"El valor de milisegundos no es válido: {e}")
 
+# Las siguientes funciones son para crear gráficos con plotly
+
+def graficoIPCeIPV(dfs):
+    df_ipc = dfs['data_ipc'].filter(
+        (pl.col('Fecha') >= datetime(2018, 1, 1)) & 
+        (pl.col('Fecha') <= datetime(2024, 1, 1))
+    )
+    df_ipv = dfs['data_ipv'].filter(
+        (pl.col('Id_ipv') == 3) &
+        (pl.col('Fecha') >= datetime(2018, 1, 1)) & 
+        (pl.col('Fecha') <= datetime(2024, 1, 1))
+    )
+
+    fig = go.Figure()
+
+    fig.add_trace(go.Scatter(
+        x=df_ipc['Fecha'],
+        y=df_ipc['Valor'],
+        name='IPC %',
+        yaxis='y1'
+    ))
+
+    fig.add_trace(go.Scatter(
+        x=df_ipv['Fecha'],
+        y=df_ipv['Valor'],
+        name='IPV %',
+        yaxis='y1'  
+    ))
+
+    fig.update_layout(
+        title='Evolución IPC vs IPV (2018-2024)',
+        yaxis=dict(title='Variación %'),
+    )
+    fig.write_html("ipc_vs_ipv.html")
+
+def graficoIPVEspanya(dfs):
+    geojson_url = "https://raw.githubusercontent.com/codeforgermany/click_that_hood/main/public/data/spain-communities.geojson"
+    geojson = requests.get(geojson_url).json()
+    
+    ids_ccaa = dfs['ipv'].filter(
+        pl.col('Nombre').str.contains('General. Variación anual')
+    ).select('id', 'Nombre')
+
+    mapa_comunidades = {
+        'Andalucía': 'Andalucia',
+        'Aragón': 'Aragon',
+        'Asturias, Principado de': 'Asturias',
+        'Balears, Illes': 'Baleares',
+        'Canarias': 'Canarias',
+        'Cantabria': 'Cantabria',
+        'Castilla y León': 'Castilla-Leon',
+        'Castilla - La Mancha': 'Castilla-La Mancha',
+        'Cataluña': 'Cataluña',
+        'Comunitat Valenciana': 'Valencia',
+        'Extremadura': 'Extremadura',
+        'Galicia': 'Galicia',
+        'Madrid, Comunidad de': 'Madrid',
+        'Murcia, Región de': 'Murcia',
+        'Navarra, Comunidad Foral de': 'Navarra',
+        'País Vasco': 'Pais Vasco',
+        'Rioja, La': 'La Rioja',
+        'Ceuta': 'Ceuta',
+        'Melilla': 'Melilla'
+    }
+
+    filas = []
+    for row in ids_ccaa.iter_rows(named=True):
+        nombre = row['Nombre'].split('.')[0].strip()
+        nombre_geo = mapa_comunidades.get(nombre)
+        if not nombre_geo:
+            continue
+
+        df_ccaa = dfs['data_ipv'].filter(
+            (pl.col('Id_ipv') == row['id']) &
+            (pl.col('Fecha') >= datetime(2018, 1, 1)) &
+            (pl.col('Fecha') <= datetime(2024, 6, 30))
+        ).sort('Fecha')
+
+        for r in df_ccaa.iter_rows(named=True):
+            filas.append({
+                'comunidad': nombre_geo,
+                'fecha': str(r['Fecha'])[:7],
+                'valor': r['Valor']
+            })
+
+    df_mapa = pl.DataFrame(filas).to_pandas()
+
+    fig = px.choropleth(
+        df_mapa,
+        geojson=geojson,
+        locations='comunidad',
+        featureidkey='properties.name',
+        color='valor',
+        hover_name='comunidad',
+        animation_frame='fecha',
+        color_continuous_scale='RdYlGn',
+        range_color=[-5, 15],
+        title='IPV Variación anual por Comunidad Autónoma (2018-2024)'
+    )
+
+    fig.update_geos(fitbounds="locations", visible=False)
+    fig.write_html("ipv_espanya.html")
+
 
 if __name__ == "__main__":
     datos = conexionBBDD_SSH()
     
-                            # Verificando podemos ver que no tenemos datos nulos, 
-    verificarDatos(datos)   # además de qestar bien formateados y estructurados ha excepción de las fechas
-                            # para hacer unos gráficos con plotly 
+                                                # Verificando podemos ver que no tenemos datos nulos, 
+    datos_limpiados = verificarDatos(datos)     # además de qestar bien formateados y estructurados ha excepción de las fechas
+                                                # para hacer unos gráficos con plotly
     
+    graficoIPCeIPV(datos_limpiados)
+    graficoIPVEspanya(datos_limpiados)
