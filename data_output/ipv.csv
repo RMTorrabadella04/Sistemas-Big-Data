@@ -1,0 +1,241 @@
+id,COD,Nombre
+1,IPV769,Total Nacional. General. Índice. 
+2,IPV949,Total Nacional. General. Variación trimestral. 
+3,IPV948,Total Nacional. General. Variación anual. 
+4,IPV947,Total Nacional. General. Variación en lo que va de año. 
+5,IPV768,Total Nacional. Vivienda nueva. Índice. 
+6,IPV946,Total Nacional. Vivienda nueva. Variación trimestral. 
+7,IPV945,Total Nacional. Vivienda nueva. Variación anual. 
+8,IPV944,Total Nacional. Vivienda nueva. Variación en lo que va de año. 
+9,IPV767,Total Nacional. Vivienda segunda mano. Índice. 
+10,IPV943,Total Nacional. Vivienda segunda mano. Variación trimestral. 
+11,IPV942,Total Nacional. Vivienda segunda mano. Variación anual. 
+12,IPV941,Total Nacional. Vivienda segunda mano. Variación en lo que va de año. 
+13,IPV766,Andalucía. General. Índice. 
+14,IPV940,Andalucía. General. Variación trimestral. 
+15,IPV939,Andalucía. General. Variación anual. 
+16,IPV938,Andalucía. General. Variación en lo que va de año. 
+17,IPV765,Andalucía. Vivienda nueva. Índice. 
+18,IPV937,Andalucía. Vivienda nueva. Variación trimestral. 
+19,IPV936,Andalucía. Vivienda nueva. Variación anual. 
+20,IPV935,Andalucía. Vivienda nueva. Variación en lo que va de año. 
+21,IPV764,Andalucía. Vivienda segunda mano. Índice. 
+22,IPV934,Andalucía. Vivienda segunda mano. Variación trimestral. 
+23,IPV933,Andalucía. Vivienda segunda mano. Variación anual. 
+24,IPV932,Andalucía. Vivienda segunda mano. Variación en lo que va de año. 
+25,IPV763,Aragón. General. Índice. 
+26,IPV931,Aragón. General. Variación trimestral. 
+27,IPV930,Aragón. General. Variación anual. 
+28,IPV929,Aragón. General. Variación en lo que va de año. 
+29,IPV762,Aragón. Vivienda nueva. Índice. 
+30,IPV928,Aragón. Vivienda nueva. Variación trimestral. 
+31,IPV927,Aragón. Vivienda nueva. Variación anual. 
+32,IPV926,Aragón. Vivienda nueva. Variación en lo que va de año. 
+33,IPV761,Aragón. Vivienda segunda mano. Índice. 
+34,IPV925,Aragón. Vivienda segunda mano. Variación trimestral. 
+35,IPV924,Aragón. Vivienda segunda mano. Variación anual. 
+36,IPV923,Aragón. Vivienda segunda mano. Variación en lo que va de año. 
+37,IPV760,"Asturias, Principado de. General. Índice. "
+38,IPV922,"Asturias, Principado de. General. Variación trimestral. "
+39,IPV921,"Asturias, Principado de. General. Variación anual. "
+40,IPV920,"Asturias, Principado de. General. Variación en lo que va de año. "
+41,IPV759,"Asturias, Principado de. Vivienda nueva. Índice. "
+42,IPV919,"Asturias, Principado de. Vivienda nueva. Variación trimestral. "
+43,IPV918,"Asturias, Principado de. Vivienda nueva. Variación anual. "
+44,IPV917,"Asturias, Principado de. Vivienda nueva. Variación en lo que va de año. "
+45,IPV758,"Asturias, Principado de. Vivienda segunda mano. Índice. "
+46,IPV916,"Asturias, Principado de. Vivienda segunda mano. Variación trimestral. "
+47,IPV915,"Asturias, Principado de. Vivienda segunda mano. Variación anual. "
+48,IPV914,"Asturias, Principado de. Vivienda segunda mano. Variación en lo que va de año. "
+49,IPV757,"Balears, Illes. General. Índice. "
+50,IPV913,"Balears, Illes. General. Variación trimestral. "
+51,IPV912,"Balears, Illes. General. Variación anual. "
+52,IPV911,"Balears, Illes. General. Variación en lo que va de año. "
+53,IPV756,"Balears, Illes. Vivienda nueva. Índice. "
+54,IPV910,"Balears, Illes. Vivienda nueva. Variación trimestral. "
+55,IPV909,"Balears, Illes. Vivienda nueva. Variación anual. "
+56,IPV908,"Balears, Illes. Vivienda nueva. Variación en lo que va de año. "
+57,IPV755,"Balears, Illes. Vivienda segunda mano. Índice. "
+58,IPV907,"Balears, Illes. Vivienda segunda mano. Variación trimestral. "
+59,IPV906,"Balears, Illes. Vivienda segunda mano. Variación anual. "
+60,IPV905,"Balears, Illes. Vivienda segunda mano. Variación en lo que va de año. "
+61,IPV754,Canarias. General. Índice. 
+62,IPV904,Canarias. General. Variación trimestral. 
+63,IPV903,Canarias. General. Variación anual. 
+64,IPV902,Canarias. General. Variación en lo que va de año. 
+65,IPV753,Canarias. Vivienda nueva. Índice. 
+66,IPV901,Canarias. Vivienda nueva. Variación trimestral. 
+67,IPV900,Canarias. Vivienda nueva. Variación anual. 
+68,IPV899,Canarias. Vivienda nueva. Variación en lo que va de año. 
+69,IPV752,Canarias. Vivienda segunda mano. Índice. 
+70,IPV898,Canarias. Vivienda segunda mano. Variación trimestral. 
+71,IPV897,Canarias. Vivienda segunda mano. Variación anual. 
+72,IPV896,Canarias. Vivienda segunda mano. Variación en lo que va de año. 
+73,IPV751,Cantabria. General. Índice. 
+74,IPV895,Cantabria. General. Variación trimestral. 
+75,IPV894,Cantabria. General. Variación anual. 
+76,IPV893,Cantabria. General. Variación en lo que va de año. 
+77,IPV750,Cantabria. Vivienda nueva. Índice. 
+78,IPV892,Cantabria. Vivienda nueva. Variación trimestral. 
+79,IPV891,Cantabria. Vivienda nueva. Variación anual. 
+80,IPV890,Cantabria. Vivienda nueva. Variación en lo que va de año. 
+81,IPV749,Cantabria. Vivienda segunda mano. Índice. 
+82,IPV889,Cantabria. Vivienda segunda mano. Variación trimestral. 
+83,IPV888,Cantabria. Vivienda segunda mano. Variación anual. 
+84,IPV887,Cantabria. Vivienda segunda mano. Variación en lo que va de año. 
+85,IPV748,Castilla y León. General. Índice. 
+86,IPV886,Castilla y León. General. Variación trimestral. 
+87,IPV885,Castilla y León. General. Variación anual. 
+88,IPV884,Castilla y León. General. Variación en lo que va de año. 
+89,IPV747,Castilla y León. Vivienda nueva. Índice. 
+90,IPV883,Castilla y León. Vivienda nueva. Variación trimestral. 
+91,IPV882,Castilla y León. Vivienda nueva. Variación anual. 
+92,IPV881,Castilla y León. Vivienda nueva. Variación en lo que va de año. 
+93,IPV746,Castilla y León. Vivienda segunda mano. Índice. 
+94,IPV880,Castilla y León. Vivienda segunda mano. Variación trimestral. 
+95,IPV879,Castilla y León. Vivienda segunda mano. Variación anual. 
+96,IPV878,Castilla y León. Vivienda segunda mano. Variación en lo que va de año. 
+97,IPV745,Castilla - La Mancha. General. Índice. 
+98,IPV877,Castilla - La Mancha. General. Variación trimestral. 
+99,IPV876,Castilla - La Mancha. General. Variación anual. 
+100,IPV875,Castilla - La Mancha. General. Variación en lo que va de año. 
+101,IPV744,Castilla - La Mancha. Vivienda nueva. Índice. 
+102,IPV874,Castilla - La Mancha. Vivienda nueva. Variación trimestral. 
+103,IPV873,Castilla - La Mancha. Vivienda nueva. Variación anual. 
+104,IPV872,Castilla - La Mancha. Vivienda nueva. Variación en lo que va de año. 
+105,IPV743,Castilla - La Mancha. Vivienda segunda mano. Índice. 
+106,IPV871,Castilla - La Mancha. Vivienda segunda mano. Variación trimestral. 
+107,IPV870,Castilla - La Mancha. Vivienda segunda mano. Variación anual. 
+108,IPV869,Castilla - La Mancha. Vivienda segunda mano. Variación en lo que va de año. 
+109,IPV742,Cataluña. General. Índice. 
+110,IPV868,Cataluña. General. Variación trimestral. 
+111,IPV867,Cataluña. General. Variación anual. 
+112,IPV866,Cataluña. General. Variación en lo que va de año. 
+113,IPV741,Cataluña. Vivienda nueva. Índice. 
+114,IPV865,Cataluña. Vivienda nueva. Variación trimestral. 
+115,IPV864,Cataluña. Vivienda nueva. Variación anual. 
+116,IPV863,Cataluña. Vivienda nueva. Variación en lo que va de año. 
+117,IPV740,Cataluña. Vivienda segunda mano. Índice. 
+118,IPV862,Cataluña. Vivienda segunda mano. Variación trimestral. 
+119,IPV861,Cataluña. Vivienda segunda mano. Variación anual. 
+120,IPV860,Cataluña. Vivienda segunda mano. Variación en lo que va de año. 
+121,IPV739,Comunitat Valenciana. General. Índice. 
+122,IPV859,Comunitat Valenciana. General. Variación trimestral. 
+123,IPV858,Comunitat Valenciana. General. Variación anual. 
+124,IPV857,Comunitat Valenciana. General. Variación en lo que va de año. 
+125,IPV738,Comunitat Valenciana. Vivienda nueva. Índice. 
+126,IPV856,Comunitat Valenciana. Vivienda nueva. Variación trimestral. 
+127,IPV855,Comunitat Valenciana. Vivienda nueva. Variación anual. 
+128,IPV854,Comunitat Valenciana. Vivienda nueva. Variación en lo que va de año. 
+129,IPV737,Comunitat Valenciana. Vivienda segunda mano. Índice. 
+130,IPV853,Comunitat Valenciana. Vivienda segunda mano. Variación trimestral. 
+131,IPV852,Comunitat Valenciana. Vivienda segunda mano. Variación anual. 
+132,IPV851,Comunitat Valenciana. Vivienda segunda mano. Variación en lo que va de año. 
+133,IPV736,Extremadura. General. Índice. 
+134,IPV850,Extremadura. General. Variación trimestral. 
+135,IPV849,Extremadura. General. Variación anual. 
+136,IPV848,Extremadura. General. Variación en lo que va de año. 
+137,IPV735,Extremadura. Vivienda nueva. Índice. 
+138,IPV847,Extremadura. Vivienda nueva. Variación trimestral. 
+139,IPV846,Extremadura. Vivienda nueva. Variación anual. 
+140,IPV845,Extremadura. Vivienda nueva. Variación en lo que va de año. 
+141,IPV734,Extremadura. Vivienda segunda mano. Índice. 
+142,IPV844,Extremadura. Vivienda segunda mano. Variación trimestral. 
+143,IPV843,Extremadura. Vivienda segunda mano. Variación anual. 
+144,IPV842,Extremadura. Vivienda segunda mano. Variación en lo que va de año. 
+145,IPV733,Galicia. General. Índice. 
+146,IPV841,Galicia. General. Variación trimestral. 
+147,IPV840,Galicia. General. Variación anual. 
+148,IPV839,Galicia. General. Variación en lo que va de año. 
+149,IPV732,Galicia. Vivienda nueva. Índice. 
+150,IPV838,Galicia. Vivienda nueva. Variación trimestral. 
+151,IPV837,Galicia. Vivienda nueva. Variación anual. 
+152,IPV836,Galicia. Vivienda nueva. Variación en lo que va de año. 
+153,IPV731,Galicia. Vivienda segunda mano. Índice. 
+154,IPV835,Galicia. Vivienda segunda mano. Variación trimestral. 
+155,IPV834,Galicia. Vivienda segunda mano. Variación anual. 
+156,IPV833,Galicia. Vivienda segunda mano. Variación en lo que va de año. 
+157,IPV730,"Madrid, Comunidad de. General. Índice. "
+158,IPV832,"Madrid, Comunidad de. General. Variación trimestral. "
+159,IPV831,"Madrid, Comunidad de. General. Variación anual. "
+160,IPV830,"Madrid, Comunidad de. General. Variación en lo que va de año. "
+161,IPV729,"Madrid, Comunidad de. Vivienda nueva. Índice. "
+162,IPV829,"Madrid, Comunidad de. Vivienda nueva. Variación trimestral. "
+163,IPV828,"Madrid, Comunidad de. Vivienda nueva. Variación anual. "
+164,IPV827,"Madrid, Comunidad de. Vivienda nueva. Variación en lo que va de año. "
+165,IPV728,"Madrid, Comunidad de. Vivienda segunda mano. Índice. "
+166,IPV826,"Madrid, Comunidad de. Vivienda segunda mano. Variación trimestral. "
+167,IPV825,"Madrid, Comunidad de. Vivienda segunda mano. Variación anual. "
+168,IPV824,"Madrid, Comunidad de. Vivienda segunda mano. Variación en lo que va de año. "
+169,IPV727,"Murcia, Región de. General. Índice. "
+170,IPV823,"Murcia, Región de. General. Variación trimestral. "
+171,IPV822,"Murcia, Región de. General. Variación anual. "
+172,IPV821,"Murcia, Región de. General. Variación en lo que va de año. "
+173,IPV726,"Murcia, Región de. Vivienda nueva. Índice. "
+174,IPV820,"Murcia, Región de. Vivienda nueva. Variación trimestral. "
+175,IPV819,"Murcia, Región de. Vivienda nueva. Variación anual. "
+176,IPV818,"Murcia, Región de. Vivienda nueva. Variación en lo que va de año. "
+177,IPV725,"Murcia, Región de. Vivienda segunda mano. Índice. "
+178,IPV817,"Murcia, Región de. Vivienda segunda mano. Variación trimestral. "
+179,IPV816,"Murcia, Región de. Vivienda segunda mano. Variación anual. "
+180,IPV815,"Murcia, Región de. Vivienda segunda mano. Variación en lo que va de año. "
+181,IPV724,"Navarra, Comunidad Foral de. General. Índice. "
+182,IPV814,"Navarra, Comunidad Foral de. General. Variación trimestral. "
+183,IPV813,"Navarra, Comunidad Foral de. General. Variación anual. "
+184,IPV812,"Navarra, Comunidad Foral de. General. Variación en lo que va de año. "
+185,IPV723,"Navarra, Comunidad Foral de. Vivienda nueva. Índice. "
+186,IPV811,"Navarra, Comunidad Foral de. Vivienda nueva. Variación trimestral. "
+187,IPV810,"Navarra, Comunidad Foral de. Vivienda nueva. Variación anual. "
+188,IPV809,"Navarra, Comunidad Foral de. Vivienda nueva. Variación en lo que va de año. "
+189,IPV722,"Navarra, Comunidad Foral de. Vivienda segunda mano. Índice. "
+190,IPV808,"Navarra, Comunidad Foral de. Vivienda segunda mano. Variación trimestral. "
+191,IPV807,"Navarra, Comunidad Foral de. Vivienda segunda mano. Variación anual. "
+192,IPV806,"Navarra, Comunidad Foral de. Vivienda segunda mano. Variación en lo que va de año. "
+193,IPV721,País Vasco. General. Índice. 
+194,IPV805,País Vasco. General. Variación trimestral. 
+195,IPV804,País Vasco. General. Variación anual. 
+196,IPV803,País Vasco. General. Variación en lo que va de año. 
+197,IPV720,País Vasco. Vivienda nueva. Índice. 
+198,IPV802,País Vasco. Vivienda nueva. Variación trimestral. 
+199,IPV801,País Vasco. Vivienda nueva. Variación anual. 
+200,IPV800,País Vasco. Vivienda nueva. Variación en lo que va de año. 
+201,IPV719,País Vasco. Vivienda segunda mano. Índice. 
+202,IPV799,País Vasco. Vivienda segunda mano. Variación trimestral. 
+203,IPV798,País Vasco. Vivienda segunda mano. Variación anual. 
+204,IPV797,País Vasco. Vivienda segunda mano. Variación en lo que va de año. 
+205,IPV718,"Rioja, La. General. Índice. "
+206,IPV796,"Rioja, La. General. Variación trimestral. "
+207,IPV795,"Rioja, La. General. Variación anual. "
+208,IPV794,"Rioja, La. General. Variación en lo que va de año. "
+209,IPV717,"Rioja, La. Vivienda nueva. Índice. "
+210,IPV793,"Rioja, La. Vivienda nueva. Variación trimestral. "
+211,IPV792,"Rioja, La. Vivienda nueva. Variación anual. "
+212,IPV791,"Rioja, La. Vivienda nueva. Variación en lo que va de año. "
+213,IPV716,"Rioja, La. Vivienda segunda mano. Índice. "
+214,IPV790,"Rioja, La. Vivienda segunda mano. Variación trimestral. "
+215,IPV789,"Rioja, La. Vivienda segunda mano. Variación anual. "
+216,IPV788,"Rioja, La. Vivienda segunda mano. Variación en lo que va de año. "
+217,IPV715,Ceuta. General. Índice. 
+218,IPV787,Ceuta. General. Variación trimestral. 
+219,IPV786,Ceuta. General. Variación anual. 
+220,IPV785,Ceuta. General. Variación en lo que va de año. 
+221,IPV714,Ceuta. Vivienda nueva. Índice. 
+222,IPV784,Ceuta. Vivienda nueva. Variación trimestral. 
+223,IPV783,Ceuta. Vivienda nueva. Variación anual. 
+224,IPV782,Ceuta. Vivienda nueva. Variación en lo que va de año. 
+225,IPV713,Ceuta. Vivienda segunda mano. Índice. 
+226,IPV781,Ceuta. Vivienda segunda mano. Variación trimestral. 
+227,IPV780,Ceuta. Vivienda segunda mano. Variación anual. 
+228,IPV779,Ceuta. Vivienda segunda mano. Variación en lo que va de año. 
+229,IPV712,Melilla. General. Índice. 
+230,IPV778,Melilla. General. Variación trimestral. 
+231,IPV777,Melilla. General. Variación anual. 
+232,IPV776,Melilla. General. Variación en lo que va de año. 
+233,IPV711,Melilla. Vivienda nueva. Índice. 
+234,IPV775,Melilla. Vivienda nueva. Variación trimestral. 
+235,IPV774,Melilla. Vivienda nueva. Variación anual. 
+236,IPV773,Melilla. Vivienda nueva. Variación en lo que va de año. 
+237,IPV710,Melilla. Vivienda segunda mano. Índice. 
+238,IPV772,Melilla. Vivienda segunda mano. Variación trimestral. 
+239,IPV771,Melilla. Vivienda segunda mano. Variación anual. 
+240,IPV770,Melilla. Vivienda segunda mano. Variación en lo que va de año. 

@@ -80,7 +80,7 @@ def verificarDatos(dfs):
             )
             dfs[nombre] = df
         print(df.head())
-    
+        df.write_csv(f"data_output/{nombre}.csv")
     return dfs
 
 # Función que pasa de milisegundos a formato datetime.
