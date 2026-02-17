@@ -1,5 +1,4 @@
 import paramiko
-# Parche para versiones modernas de paramiko
 if not hasattr(paramiko, 'DSSKey'):
     paramiko.DSSKey = paramiko.dsskey.DSSKey
 
@@ -60,6 +59,9 @@ def conexionBBDD_SSH():
         
         return dfs
 
+# Verifica que todos los DataFrames estén correctamente formateados, 
+# sin valores nulos y con las fechas convertidas a formato datetime 
+# para facilitar su uso en gráficos y análisis posteriores. 
 def verificarDatos(dfs):
     for nombre, df in dfs.items():
         print(f"\n--- {nombre} ---")
@@ -69,7 +71,6 @@ def verificarDatos(dfs):
         print(f"Valores nulos: \n{df.null_count().sum()}\n")
         print(f"Total filas: {len(df)}")
         
-        # Cambiaremos el formato de fecha si existe la columna 'fecha'
         if 'Fecha' in df.columns:
             df = df.with_columns(
                 pl.col('Fecha').map_elements(
@@ -82,14 +83,14 @@ def verificarDatos(dfs):
     
     return dfs
 
+# Función que pasa de milisegundos a formato datetime.
+
 def milisegundos_a_fecha(ms, tz=None):
     ms = int(ms)
-    # Validación de entrada
     if not isinstance(ms, (int, float)):
         raise ValueError("El valor debe ser un número (int o float).")
     
     try:
-        # Convertir milisegundos a segundos
         segundos = ms / 1000.0
         return datetime.fromtimestamp(segundos, tz=tz)
     except (OverflowError, OSError) as e:
@@ -198,6 +199,67 @@ def graficoIPVEspanya(dfs):
     fig.update_geos(fitbounds="locations", visible=False)
     fig.write_html("ipv_espanya.html")
 
+def graficoHeatmapEstacional(dfs):
+    df = dfs['data_ipv'].filter(pl.col('Id_ipv') == 3)
+    
+    df_pivot = df.to_pandas()
+    df_pivot['Trimestre'] = df_pivot['FK_Periodo'].apply(lambda x: f"T{x-18}")
+    
+    pivot = df_pivot.pivot_table(index='Anyo', columns='Trimestre', values='Valor')
+
+    fig = px.imshow(
+        pivot,
+        labels=dict(x="Trimestre", y="Año", color="Var. Anual %"),
+        x=pivot.columns,
+        y=pivot.index,
+        color_continuous_scale='YlOrRd',
+        title='Intensidad de Subida de Precios (IPV) por Trimestre y Año'
+    )
+    
+    fig.update_layout(xaxis_nticks=4)
+    fig.write_html("ipv_heatmap.html")
+
+def graficoRankingCCAA(dfs):
+    ccaa_nombres = dfs['ipv'].filter(
+        pl.col('Nombre').str.contains('General. Índice')
+    ).select(['id', 'Nombre'])
+
+    resultados = []
+    for row in ccaa_nombres.iter_rows(named=True):
+        nombre_limpio = row['Nombre'].split('.')[0].strip()
+        
+        df_ccaa = dfs['data_ipv'].filter(
+            (pl.col('Id_ipv') == row['id']) &
+            (pl.col('Fecha') >= datetime(2018, 1, 1)) &
+            (pl.col('Fecha') <= datetime(2024, 12, 31))
+        ).sort('Fecha')
+
+        if len(df_ccaa) > 1:
+            inicio = df_ccaa['Valor'][0]
+            fin = df_ccaa['Valor'][-1]
+            
+            crecimiento = ((fin - inicio) / inicio) * 100
+            
+            resultados.append({
+                'Comunidad': nombre_limpio,
+                'Crecimiento %': round(crecimiento, 2)
+            })
+
+    df_ranking = pl.DataFrame(resultados).sort('Crecimiento %', descending=True).to_pandas()
+
+    fig = px.bar(
+        df_ranking,
+        x='Crecimiento %',
+        y='Comunidad',
+        orientation='h',
+        color='Crecimiento %',
+        color_continuous_scale='Reds',
+        title='¿Dónde ha subido más la vivienda? Crecimiento total acumulado (2018-2024)',
+        labels={'Crecimiento %': 'Incremento porcentual total'}
+    )
+
+    fig.update_layout(yaxis={'categoryorder':'total ascending'}, template='plotly_white')
+    fig.write_html("ranking_ccaa_crecimiento.html")
 
 if __name__ == "__main__":
     datos = conexionBBDD_SSH()
@@ -208,3 +270,5 @@ if __name__ == "__main__":
     
     graficoIPCeIPV(datos_limpiados)
     graficoIPVEspanya(datos_limpiados)
+    graficoHeatmapEstacional(datos_limpiados)
+    graficoRankingCCAA(datos_limpiados)
