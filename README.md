@@ -39,11 +39,11 @@ Este gráfico de barras muestra el crecimiento total acumulado del precio de la 
 Aquí se muestra la evolución y concentración de valores del IPC (inflación) por año entre 2017 y 2025 mediante un diagrama de densidad. Se observa que entre 2017 y 2019 los valores son relativamente bajos y estables, con poca variación, mientras que en 2020 incluso aparecen valores cercanos o por debajo de cero, indicando un periodo de muy baja inflación o ligera deflación. A partir de 2021 hay un aumento notable en la dispersión y el nivel del IPC, alcanzando su punto más alto en 2022, donde se concentran los valores más elevados (alrededor de 6 a más de 10), lo que refleja un pico inflacionario. Posteriormente, desde 2023 hasta 2025, los valores descienden y se estabilizan en niveles moderados (aproximadamente entre 2 y 4), lo que sugiere una normalización gradual de la inflación tras el aumento significativo de 2022.
 
 ### Gráfico 2
-![IMagen no disponible](IPC_vs_IPV.png)
+![IMagen no disponible](SBD_3.2_Tableau/IPC_vs_IPV.png)
 
 Esta gráfica compara la evolución del IPC (línea azul) y el IPV (línea roja) entre 2017 y 2025, mostrando cómo ambos indicadores se comportan a lo largo del tiempo. En los primeros años (2017–2019) ambos siguen una tendencia similar con valores moderados y cercanos, pero en 2020 caen a niveles bajos. A partir de 2021 se produce una divergencia clara: el IPV aumenta bruscamente, alcanzando su punto máximo en 2022 (casi 8), mientras que el IPC sube mucho menos y se mantiene relativamente contenido. Desde 2023 en adelante, ambos indicadores tienden a estabilizarse y acercarse nuevamente, situándose alrededor de valores entre 2.5 y 3 hacia 2024–2025. En conjunto, la gráfica sugiere que el IPV es más volátil y reacciona con mayor intensidad a cambios económicos, mientras que el IPC muestra una evolución más suave y gradual.
 
 ### Gráfico 3
-![IMagen no disponible](IPV_anyo.png)
+![IMagen no disponible](SBD_3.2_Tableau/IPV_anyo.png)
 
 Esta gráfica de barras apiladas muestra la evolución del valor total anual del IPV desde aproximadamente 2007 hasta 2025. Se observa una caída progresiva entre 2007 y 2013, alcanzando su punto más bajo en ese último año, lo que sugiere un periodo de contracción o menor actividad. A partir de 2014, comienza una recuperación sostenida, con incrementos graduales año tras año. Este crecimiento se vuelve más marcado desde 2021, hasta alcanzar su nivel más alto en 2025. Además, al ser barras apiladas, se aprecia cómo los distintos componentes que forman el IPV contribuyen al total, manteniendo una proporción relativamente estable a lo largo del tiempo. En conjunto, la gráfica refleja un ciclo claro: caída inicial, recuperación progresiva y expansión fuerte en los últimos años.
