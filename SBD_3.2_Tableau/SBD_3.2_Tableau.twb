@@ -1,0 +1,2146 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0226.1626                               -->
+<workbook original-version='18.1' source-build='2026.1.0 (20261.26.0226.1626)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <Heatmap />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <_.fcp.ObjectModelSharedDimensions.true...ObjectModelSharedDimensions />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='ipc_principal.csv+ (Varias conexiones)' inline='true' name='federated.0z3mxrw0wmrz321h63d2r0zflaqr' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ipc_principal' name='textscan.0p2izmu1o1a430168mdk300yqa6c'>
+            <connection class='textscan' directory='C:/Users/raulm/Downloads' filename='ipv_Data.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='ipc_Data' name='textscan.1y925x00hd8ope18x8g2l0smbvl7'>
+            <connection class='textscan' directory='C:/Users/raulm/Downloads' filename='ipc_principal.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='ipv_principal' name='textscan.0wxxlps11p5eh8176ckg40m6flwx'>
+            <connection class='textscan' directory='C:/Users/raulm/Downloads' filename='ipv_principal.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='ipv_Data' name='textscan.1d3jtfl0ni1ow11gb90ek1mjnc9b'>
+            <connection class='textscan' directory='C:/Users/raulm/Downloads' filename='ipc_Data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.0p2izmu1o1a430168mdk300yqa6c' name='ipc_principal.csv' table='[ipc_principal#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='es_ES' separator=';'>
+              <column datatype='string' name='COD' ordinal='0' />
+              <column datatype='string' name='Nombre' ordinal='1' />
+              <column datatype='integer' name='FK_Unidad' ordinal='2' />
+              <column datatype='integer' name='FK_Escala' ordinal='3' />
+              <column datatype='string' name='ID_RELACIONAL' ordinal='4' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1d3jtfl0ni1ow11gb90ek1mjnc9b' name='ipc_Data.csv' table='[ipc_Data#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='es_ES' separator=';'>
+              <column datatype='datetime' name='Fecha' ordinal='0' />
+              <column datatype='integer' name='FK_TipoDato' ordinal='1' />
+              <column datatype='integer' name='Anyo' ordinal='2' />
+              <column datatype='real' name='Valor' ordinal='3' />
+              <column datatype='boolean' name='Secreto' ordinal='4' />
+              <column datatype='string' name='REF_ID_RELACIONAL' ordinal='5' />
+              <column datatype='integer' name='Trimestre' ordinal='6' />
+              <column datatype='real' name='Promedio_Trimestral' ordinal='7' />
+            </columns>
+          </relation>
+          <_.fcp.ObjectModelSharedDimensions.true...relation connection='textscan.1d3jtfl0ni1ow11gb90ek1mjnc9b' name='ipv_Data.csv' table='[ipv_Data#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='es_ES' separator=';'>
+              <column datatype='datetime' name='Fecha' ordinal='0' />
+              <column datatype='integer' name='FK_TipoDato' ordinal='1' />
+              <column datatype='integer' name='Anyo' ordinal='2' />
+              <column datatype='real' name='Valor' ordinal='3' />
+              <column datatype='boolean' name='Secreto' ordinal='4' />
+              <column datatype='string' name='REF_ID_RELACIONAL' ordinal='5' />
+              <column datatype='integer' name='Trimestre' ordinal='6' />
+              <column datatype='real' name='Variacion_Porcentual_Trimestre' ordinal='7' />
+            </columns>
+          </_.fcp.ObjectModelSharedDimensions.true...relation>
+          <_.fcp.ObjectModelSharedDimensions.true...relation connection='textscan.1d3jtfl0ni1ow11gb90ek1mjnc9b' name='ipv_principal.csv' table='[ipv_principal#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='es_ES' separator=';'>
+              <column datatype='string' name='COD' ordinal='0' />
+              <column datatype='string' name='Nombre' ordinal='1' />
+              <column datatype='integer' name='FK_Unidad' ordinal='2' />
+              <column datatype='integer' name='FK_Escala' ordinal='3' />
+              <column datatype='string' name='ID_RELACIONAL' ordinal='4' />
+            </columns>
+          </_.fcp.ObjectModelSharedDimensions.true...relation>
+        </relation>
+        <cols>
+          <map key='[Anyo (ipv_Data.csv)]' value='[ipv_Data.csv].[Anyo]' />
+          <map key='[Anyo]' value='[ipc_Data.csv].[Anyo]' />
+          <map key='[COD (ipv_principal.csv)]' value='[ipv_principal.csv].[COD]' />
+          <map key='[COD]' value='[ipc_principal.csv].[COD]' />
+          <map key='[FK_Escala (ipv_principal.csv)]' value='[ipv_principal.csv].[FK_Escala]' />
+          <map key='[FK_Escala]' value='[ipc_principal.csv].[FK_Escala]' />
+          <map key='[FK_TipoDato (ipv_Data.csv)]' value='[ipv_Data.csv].[FK_TipoDato]' />
+          <map key='[FK_TipoDato]' value='[ipc_Data.csv].[FK_TipoDato]' />
+          <map key='[FK_Unidad (ipv_principal.csv)]' value='[ipv_principal.csv].[FK_Unidad]' />
+          <map key='[FK_Unidad]' value='[ipc_principal.csv].[FK_Unidad]' />
+          <map key='[Fecha (ipv_Data.csv)]' value='[ipv_Data.csv].[Fecha]' />
+          <map key='[Fecha]' value='[ipc_Data.csv].[Fecha]' />
+          <map key='[ID_RELACIONAL (ipv_principal.csv)]' value='[ipv_principal.csv].[ID_RELACIONAL]' />
+          <map key='[ID_RELACIONAL]' value='[ipc_principal.csv].[ID_RELACIONAL]' />
+          <map key='[Nombre (ipv_principal.csv)]' value='[ipv_principal.csv].[Nombre]' />
+          <map key='[Nombre]' value='[ipc_principal.csv].[Nombre]' />
+          <map key='[Promedio_Trimestral]' value='[ipc_Data.csv].[Promedio_Trimestral]' />
+          <map key='[REF_ID_RELACIONAL (ipv_Data.csv)]' value='[ipv_Data.csv].[REF_ID_RELACIONAL]' />
+          <map key='[REF_ID_RELACIONAL]' value='[ipc_Data.csv].[REF_ID_RELACIONAL]' />
+          <map key='[Secreto (ipv_Data.csv)]' value='[ipv_Data.csv].[Secreto]' />
+          <map key='[Secreto]' value='[ipc_Data.csv].[Secreto]' />
+          <map key='[Trimestre (ipv_Data.csv)]' value='[ipv_Data.csv].[Trimestre]' />
+          <map key='[Trimestre]' value='[ipc_Data.csv].[Trimestre]' />
+          <map key='[Valor (ipv_Data.csv)]' value='[ipv_Data.csv].[Valor]' />
+          <map key='[Valor]' value='[ipc_Data.csv].[Valor]' />
+          <map key='[Variacion_Porcentual_Trimestre]' value='[ipv_Data.csv].[Variacion_Porcentual_Trimestre]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ipc_principal.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_ES&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ipc_Data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_ES&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_ES&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ipv_principal.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_ES&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COD</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COD]</local-name>
+            <parent-name>[ipc_principal.csv]</parent-name>
+            <remote-alias>COD</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Nombre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Nombre]</local-name>
+            <parent-name>[ipc_principal.csv]</parent-name>
+            <remote-alias>Nombre</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FK_Unidad</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FK_Unidad]</local-name>
+            <parent-name>[ipc_principal.csv]</parent-name>
+            <remote-alias>FK_Unidad</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FK_Escala</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FK_Escala]</local-name>
+            <parent-name>[ipc_principal.csv]</parent-name>
+            <remote-alias>FK_Escala</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID_RELACIONAL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ID_RELACIONAL]</local-name>
+            <parent-name>[ipc_principal.csv]</parent-name>
+            <remote-alias>ID_RELACIONAL</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fecha</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Fecha]</local-name>
+            <parent-name>[ipc_Data.csv]</parent-name>
+            <remote-alias>Fecha</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FK_TipoDato</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FK_TipoDato]</local-name>
+            <parent-name>[ipc_Data.csv]</parent-name>
+            <remote-alias>FK_TipoDato</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Anyo</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Anyo]</local-name>
+            <parent-name>[ipc_Data.csv]</parent-name>
+            <remote-alias>Anyo</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Valor</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Valor]</local-name>
+            <parent-name>[ipc_Data.csv]</parent-name>
+            <remote-alias>Valor</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Secreto</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Secreto]</local-name>
+            <parent-name>[ipc_Data.csv]</parent-name>
+            <remote-alias>Secreto</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REF_ID_RELACIONAL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[REF_ID_RELACIONAL]</local-name>
+            <parent-name>[ipc_Data.csv]</parent-name>
+            <remote-alias>REF_ID_RELACIONAL</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Trimestre</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Trimestre]</local-name>
+            <parent-name>[ipc_Data.csv]</parent-name>
+            <remote-alias>Trimestre</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Promedio_Trimestral</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Promedio_Trimestral]</local-name>
+            <parent-name>[ipc_Data.csv]</parent-name>
+            <remote-alias>Promedio_Trimestral</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+          </metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Fecha</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Fecha (ipv_Data.csv)]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>Fecha</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>FK_TipoDato</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FK_TipoDato (ipv_Data.csv)]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>FK_TipoDato</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Anyo</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Anyo (ipv_Data.csv)]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>Anyo</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Valor</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Valor (ipv_Data.csv)]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>Valor</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Secreto</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Secreto (ipv_Data.csv)]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>Secreto</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>REF_ID_RELACIONAL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[REF_ID_RELACIONAL (ipv_Data.csv)]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>REF_ID_RELACIONAL</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Trimestre</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Trimestre (ipv_Data.csv)]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>Trimestre</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Variacion_Porcentual_Trimestre</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Variacion_Porcentual_Trimestre]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>Variacion_Porcentual_Trimestre</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>COD</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COD (ipv_principal.csv)]</local-name>
+            <parent-name>[ipv_principal.csv]</parent-name>
+            <remote-alias>COD</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Nombre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Nombre (ipv_principal.csv)]</local-name>
+            <parent-name>[ipv_principal.csv]</parent-name>
+            <remote-alias>Nombre</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>FK_Unidad</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FK_Unidad (ipv_principal.csv)]</local-name>
+            <parent-name>[ipv_principal.csv]</parent-name>
+            <remote-alias>FK_Unidad</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>FK_Escala</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FK_Escala (ipv_principal.csv)]</local-name>
+            <parent-name>[ipv_principal.csv]</parent-name>
+            <remote-alias>FK_Escala</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>ID_RELACIONAL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ID_RELACIONAL (ipv_principal.csv)]</local-name>
+            <parent-name>[ipv_principal.csv]</parent-name>
+            <remote-alias>ID_RELACIONAL</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Anyo (ipv Data.csv)' datatype='integer' name='[Anyo (ipv_Data.csv)]' role='measure' type='quantitative' />
+      <column caption='COD (ipv principal.csv)' datatype='string' name='[COD (ipv_principal.csv)]' role='dimension' type='nominal' />
+      <column caption='FK Escala (ipv principal.csv)' datatype='integer' name='[FK_Escala (ipv_principal.csv)]' role='measure' type='quantitative' />
+      <column caption='FK Escala' datatype='integer' name='[FK_Escala]' role='measure' type='quantitative' />
+      <column caption='FK TipoDato (ipv Data.csv)' datatype='integer' name='[FK_TipoDato (ipv_Data.csv)]' role='measure' type='quantitative' />
+      <column caption='FK TipoDato' datatype='integer' name='[FK_TipoDato]' role='measure' type='quantitative' />
+      <column caption='FK Unidad (ipv principal.csv)' datatype='integer' name='[FK_Unidad (ipv_principal.csv)]' role='measure' type='quantitative' />
+      <column caption='FK Unidad' datatype='integer' name='[FK_Unidad]' role='measure' type='quantitative' />
+      <column caption='Fecha (ipv Data.csv)' datatype='datetime' name='[Fecha (ipv_Data.csv)]' role='dimension' type='ordinal' />
+      <column caption='ID RELACIONAL (ipv principal.csv)' datatype='string' name='[ID_RELACIONAL (ipv_principal.csv)]' role='dimension' type='nominal' />
+      <column caption='Id Relacional' datatype='string' name='[ID_RELACIONAL]' role='dimension' type='nominal' />
+      <column caption='Nombre (ipv principal.csv)' datatype='string' name='[Nombre (ipv_principal.csv)]' role='dimension' type='nominal' />
+      <column caption='Promedio Trimestral' datatype='real' name='[Promedio_Trimestral]' role='measure' type='quantitative' />
+      <column caption='REF ID RELACIONAL (ipv Data.csv)' datatype='string' name='[REF_ID_RELACIONAL (ipv_Data.csv)]' role='dimension' type='nominal' />
+      <column caption='Ref Id Relacional' datatype='string' name='[REF_ID_RELACIONAL]' role='dimension' type='nominal' />
+      <column caption='Secreto (ipv Data.csv)' datatype='boolean' name='[Secreto (ipv_Data.csv)]' role='dimension' type='nominal' />
+      <column caption='Trimestre (ipv Data.csv)' datatype='integer' name='[Trimestre (ipv_Data.csv)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Trimestre]' role='dimension' type='quantitative' />
+      <column caption='Valor (ipv Data.csv)' datatype='real' name='[Valor (ipv_Data.csv)]' role='measure' type='quantitative' />
+      <column caption='Variacion Porcentual Trimestre' datatype='real' name='[Variacion_Porcentual_Trimestre]' role='dimension' type='quantitative' />
+      <column caption='ipc_Data.csv' datatype='table' name='[__tableau_internal_object_id__].[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]' role='measure' type='quantitative' />
+      <column caption='ipc_principal.csv' datatype='table' name='[__tableau_internal_object_id__].[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]' role='measure' type='quantitative' />
+      <column caption='ipv_Data.csv' datatype='table' name='[__tableau_internal_object_id__].[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]' role='measure' type='quantitative' />
+      <column caption='ipv_principal.csv' datatype='table' name='[__tableau_internal_object_id__].[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]' role='measure' type='quantitative' />
+      <column-instance column='[Promedio_Trimestral]' derivation='Avg' name='[avg:Promedio_Trimestral:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Variacion_Porcentual_Trimestre]' derivation='Avg' name='[avg:Variacion_Porcentual_Trimestre:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Variacion_Porcentual_Trimestre]' derivation='None' name='[none:Variacion_Porcentual_Trimestre:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Anyo (ipv_Data.csv)]' derivation='Sum' name='[sum:Anyo (ipv_Data.csv):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Promedio_Trimestral]' derivation='Sum' name='[sum:Promedio_Trimestral:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='es_ES' class='hyper' dbname='C:/Users/raulm/AppData/Local/Temp/TableauTemp/#TableauTemp_0gm261q10vj9ce1gmcvv203ubk6t.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/22/2026 04:30:48 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='ipc_principal.csv_BB523FF5454B4875873B8FB301142302' table='[Extract].[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]' type='table' />
+            <relation name='ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB' table='[Extract].[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]' type='table' />
+            <_.fcp.ObjectModelSharedDimensions.true...relation name='ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048' table='[Extract].[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]' type='table' />
+            <_.fcp.ObjectModelSharedDimensions.true...relation name='ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B' table='[Extract].[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Anyo (ipv_Data.csv)]' value='[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048].[Anyo]' />
+            <map key='[Anyo]' value='[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB].[Anyo]' />
+            <map key='[COD (ipv_principal.csv)]' value='[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B].[COD]' />
+            <map key='[COD]' value='[ipc_principal.csv_BB523FF5454B4875873B8FB301142302].[COD]' />
+            <map key='[FK_Escala (ipv_principal.csv)]' value='[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B].[FK_Escala]' />
+            <map key='[FK_Escala]' value='[ipc_principal.csv_BB523FF5454B4875873B8FB301142302].[FK_Escala]' />
+            <map key='[FK_TipoDato (ipv_Data.csv)]' value='[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048].[FK_TipoDato]' />
+            <map key='[FK_TipoDato]' value='[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB].[FK_TipoDato]' />
+            <map key='[FK_Unidad (ipv_principal.csv)]' value='[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B].[FK_Unidad]' />
+            <map key='[FK_Unidad]' value='[ipc_principal.csv_BB523FF5454B4875873B8FB301142302].[FK_Unidad]' />
+            <map key='[Fecha (ipv_Data.csv)]' value='[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048].[Fecha]' />
+            <map key='[Fecha]' value='[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB].[Fecha]' />
+            <map key='[ID_RELACIONAL (ipv_principal.csv)]' value='[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B].[ID_RELACIONAL]' />
+            <map key='[ID_RELACIONAL]' value='[ipc_principal.csv_BB523FF5454B4875873B8FB301142302].[ID_RELACIONAL]' />
+            <map key='[Nombre (ipv_principal.csv)]' value='[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B].[Nombre]' />
+            <map key='[Nombre]' value='[ipc_principal.csv_BB523FF5454B4875873B8FB301142302].[Nombre]' />
+            <map key='[Promedio_Trimestral]' value='[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB].[Promedio_Trimestral]' />
+            <map key='[REF_ID_RELACIONAL (ipv_Data.csv)]' value='[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048].[REF_ID_RELACIONAL]' />
+            <map key='[REF_ID_RELACIONAL]' value='[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB].[REF_ID_RELACIONAL]' />
+            <map key='[Secreto (ipv_Data.csv)]' value='[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048].[Secreto]' />
+            <map key='[Secreto]' value='[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB].[Secreto]' />
+            <map key='[Trimestre (ipv_Data.csv)]' value='[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048].[Trimestre]' />
+            <map key='[Trimestre]' value='[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB].[Trimestre]' />
+            <map key='[Valor (ipv_Data.csv)]' value='[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048].[Valor]' />
+            <map key='[Valor]' value='[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB].[Valor]' />
+            <map key='[Variacion_Porcentual_Trimestre]' value='[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048].[Variacion_Porcentual_Trimestre]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>COD</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[COD]</local-name>
+              <parent-name>[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]</parent-name>
+              <remote-alias>COD</remote-alias>
+              <ordinal>0</ordinal>
+              <family>ipc_principal.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Nombre</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Nombre]</local-name>
+              <parent-name>[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]</parent-name>
+              <remote-alias>Nombre</remote-alias>
+              <ordinal>1</ordinal>
+              <family>ipc_principal.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FK_Unidad</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[FK_Unidad]</local-name>
+              <parent-name>[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]</parent-name>
+              <remote-alias>FK_Unidad</remote-alias>
+              <ordinal>2</ordinal>
+              <family>ipc_principal.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FK_Escala</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[FK_Escala]</local-name>
+              <parent-name>[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]</parent-name>
+              <remote-alias>FK_Escala</remote-alias>
+              <ordinal>3</ordinal>
+              <family>ipc_principal.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ID_RELACIONAL</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ID_RELACIONAL]</local-name>
+              <parent-name>[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]</parent-name>
+              <remote-alias>ID_RELACIONAL</remote-alias>
+              <ordinal>4</ordinal>
+              <family>ipc_principal.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Fecha</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Fecha]</local-name>
+              <parent-name>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</parent-name>
+              <remote-alias>Fecha</remote-alias>
+              <ordinal>5</ordinal>
+              <family>ipc_Data.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FK_TipoDato</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[FK_TipoDato]</local-name>
+              <parent-name>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</parent-name>
+              <remote-alias>FK_TipoDato</remote-alias>
+              <ordinal>6</ordinal>
+              <family>ipc_Data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Anyo</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Anyo]</local-name>
+              <parent-name>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</parent-name>
+              <remote-alias>Anyo</remote-alias>
+              <ordinal>7</ordinal>
+              <family>ipc_Data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Valor</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Valor]</local-name>
+              <parent-name>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</parent-name>
+              <remote-alias>Valor</remote-alias>
+              <ordinal>8</ordinal>
+              <family>ipc_Data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>59</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Secreto</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Secreto]</local-name>
+              <parent-name>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</parent-name>
+              <remote-alias>Secreto</remote-alias>
+              <ordinal>9</ordinal>
+              <family>ipc_Data.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>REF_ID_RELACIONAL</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[REF_ID_RELACIONAL]</local-name>
+              <parent-name>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</parent-name>
+              <remote-alias>REF_ID_RELACIONAL</remote-alias>
+              <ordinal>10</ordinal>
+              <family>ipc_Data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Trimestre</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Trimestre]</local-name>
+              <parent-name>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</parent-name>
+              <remote-alias>Trimestre</remote-alias>
+              <ordinal>11</ordinal>
+              <family>ipc_Data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Promedio_Trimestral</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Promedio_Trimestral]</local-name>
+              <parent-name>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</parent-name>
+              <remote-alias>Promedio_Trimestral</remote-alias>
+              <ordinal>12</ordinal>
+              <family>ipc_Data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>27</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]</object-id>
+            </metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Fecha</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Fecha (ipv_Data.csv)]</local-name>
+              <parent-name>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</parent-name>
+              <remote-alias>Fecha</remote-alias>
+              <ordinal>13</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>76</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>FK_TipoDato</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[FK_TipoDato (ipv_Data.csv)]</local-name>
+              <parent-name>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</parent-name>
+              <remote-alias>FK_TipoDato</remote-alias>
+              <ordinal>14</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Anyo</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Anyo (ipv_Data.csv)]</local-name>
+              <parent-name>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</parent-name>
+              <remote-alias>Anyo</remote-alias>
+              <ordinal>15</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Valor</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Valor (ipv_Data.csv)]</local-name>
+              <parent-name>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</parent-name>
+              <remote-alias>Valor</remote-alias>
+              <ordinal>16</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1593</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Secreto</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Secreto (ipv_Data.csv)]</local-name>
+              <parent-name>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</parent-name>
+              <remote-alias>Secreto</remote-alias>
+              <ordinal>17</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>REF_ID_RELACIONAL</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[REF_ID_RELACIONAL (ipv_Data.csv)]</local-name>
+              <parent-name>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</parent-name>
+              <remote-alias>REF_ID_RELACIONAL</remote-alias>
+              <ordinal>18</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>260</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Trimestre</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Trimestre (ipv_Data.csv)]</local-name>
+              <parent-name>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</parent-name>
+              <remote-alias>Trimestre</remote-alias>
+              <ordinal>19</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Variacion_Porcentual_Trimestre</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Variacion_Porcentual_Trimestre]</local-name>
+              <parent-name>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</parent-name>
+              <remote-alias>Variacion_Porcentual_Trimestre</remote-alias>
+              <ordinal>20</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2183</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>COD</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[COD (ipv_principal.csv)]</local-name>
+              <parent-name>[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]</parent-name>
+              <remote-alias>COD</remote-alias>
+              <ordinal>21</ordinal>
+              <family>ipv_principal.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>224</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Nombre</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Nombre (ipv_principal.csv)]</local-name>
+              <parent-name>[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]</parent-name>
+              <remote-alias>Nombre</remote-alias>
+              <ordinal>22</ordinal>
+              <family>ipv_principal.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>224</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>FK_Unidad</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[FK_Unidad (ipv_principal.csv)]</local-name>
+              <parent-name>[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]</parent-name>
+              <remote-alias>FK_Unidad</remote-alias>
+              <ordinal>23</ordinal>
+              <family>ipv_principal.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>FK_Escala</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[FK_Escala (ipv_principal.csv)]</local-name>
+              <parent-name>[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]</parent-name>
+              <remote-alias>FK_Escala</remote-alias>
+              <ordinal>24</ordinal>
+              <family>ipv_principal.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>ID_RELACIONAL</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ID_RELACIONAL (ipv_principal.csv)]</local-name>
+              <parent-name>[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]</parent-name>
+              <remote-alias>ID_RELACIONAL</remote-alias>
+              <ordinal>25</ordinal>
+              <family>ipv_principal.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>224</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[sum:Anyo (ipv_Data.csv):qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[avg:Promedio_Trimestral:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[sum:Promedio_Trimestral:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[avg:Variacion_Porcentual_Trimestre:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[none:Variacion_Porcentual_Trimestre:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;España&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='ipc_Data.csv' id='ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB'>
+            <properties context=''>
+              <relation connection='textscan.1d3jtfl0ni1ow11gb90ek1mjnc9b' name='ipc_Data.csv' table='[ipc_Data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='es_ES' separator=';'>
+                  <column datatype='datetime' name='Fecha' ordinal='0' />
+                  <column datatype='integer' name='FK_TipoDato' ordinal='1' />
+                  <column datatype='integer' name='Anyo' ordinal='2' />
+                  <column datatype='real' name='Valor' ordinal='3' />
+                  <column datatype='boolean' name='Secreto' ordinal='4' />
+                  <column datatype='string' name='REF_ID_RELACIONAL' ordinal='5' />
+                  <column datatype='integer' name='Trimestre' ordinal='6' />
+                  <column datatype='real' name='Promedio_Trimestral' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB' table='[Extract].[ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB]' type='table' />
+            </properties>
+          </object>
+          <object caption='ipc_principal.csv' id='ipc_principal.csv_BB523FF5454B4875873B8FB301142302'>
+            <properties context=''>
+              <relation connection='textscan.0p2izmu1o1a430168mdk300yqa6c' name='ipc_principal.csv' table='[ipc_principal#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='es_ES' separator=';'>
+                  <column datatype='string' name='COD' ordinal='0' />
+                  <column datatype='string' name='Nombre' ordinal='1' />
+                  <column datatype='integer' name='FK_Unidad' ordinal='2' />
+                  <column datatype='integer' name='FK_Escala' ordinal='3' />
+                  <column datatype='string' name='ID_RELACIONAL' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='ipc_principal.csv_BB523FF5454B4875873B8FB301142302' table='[Extract].[ipc_principal.csv_BB523FF5454B4875873B8FB301142302]' type='table' />
+            </properties>
+          </object>
+          <_.fcp.ObjectModelSharedDimensions.true...object caption='ipv_Data.csv' id='ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048'>
+            <properties context=''>
+              <relation connection='textscan.1d3jtfl0ni1ow11gb90ek1mjnc9b' name='ipv_Data.csv' table='[ipv_Data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='es_ES' separator=';'>
+                  <column datatype='datetime' name='Fecha' ordinal='0' />
+                  <column datatype='integer' name='FK_TipoDato' ordinal='1' />
+                  <column datatype='integer' name='Anyo' ordinal='2' />
+                  <column datatype='real' name='Valor' ordinal='3' />
+                  <column datatype='boolean' name='Secreto' ordinal='4' />
+                  <column datatype='string' name='REF_ID_RELACIONAL' ordinal='5' />
+                  <column datatype='integer' name='Trimestre' ordinal='6' />
+                  <column datatype='real' name='Variacion_Porcentual_Trimestre' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048' table='[Extract].[ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048]' type='table' />
+            </properties>
+          </_.fcp.ObjectModelSharedDimensions.true...object>
+          <_.fcp.ObjectModelSharedDimensions.true...object caption='ipv_principal.csv' id='ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B'>
+            <properties context=''>
+              <relation connection='textscan.1d3jtfl0ni1ow11gb90ek1mjnc9b' name='ipv_principal.csv' table='[ipv_principal#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='es_ES' separator=';'>
+                  <column datatype='string' name='COD' ordinal='0' />
+                  <column datatype='string' name='Nombre' ordinal='1' />
+                  <column datatype='integer' name='FK_Unidad' ordinal='2' />
+                  <column datatype='integer' name='FK_Escala' ordinal='3' />
+                  <column datatype='string' name='ID_RELACIONAL' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B' table='[Extract].[ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B]' type='table' />
+            </properties>
+          </_.fcp.ObjectModelSharedDimensions.true...object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[COD]' />
+              <expression op='[REF_ID_RELACIONAL]' />
+            </expression>
+            <first-end-point object-id='ipc_principal.csv_BB523FF5454B4875873B8FB301142302' />
+            <second-end-point object-id='ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB' />
+          </relationship>
+          <_.fcp.ObjectModelSharedDimensions.true...relationship>
+            <expression op='='>
+              <expression op='[Fecha]' />
+              <expression op='[Fecha (ipv_Data.csv)]' />
+            </expression>
+            <first-end-point object-id='ipc_Data.csv_04284669C4CC4DCC84FF0792A8D2D7FB' />
+            <second-end-point object-id='ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048' />
+          </_.fcp.ObjectModelSharedDimensions.true...relationship>
+          <_.fcp.ObjectModelSharedDimensions.true...relationship>
+            <expression op='='>
+              <expression op='[COD (ipv_principal.csv)]' />
+              <expression op='[REF_ID_RELACIONAL (ipv_Data.csv)]' />
+            </expression>
+            <first-end-point object-id='ipv_principal.csv_B8CE44773C5C446EB7264C66C341676B' />
+            <second-end-point object-id='ipv_Data.csv_1B9134EA58554CA097CCEEB8CCEDD048' />
+          </_.fcp.ObjectModelSharedDimensions.true...relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+    <datasource caption='ipv_Data' inline='true' name='federated.1j3moz219g7kmu1a0jwqi0k79x9k' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ipv_Data' name='textscan.0ysv3df00opj1g14p25200gt8no5'>
+            <connection class='textscan' directory='C:/Users/raulm/Downloads' filename='ipv_Data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0ysv3df00opj1g14p25200gt8no5' name='ipv_Data.csv' table='[ipv_Data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='es_ES' separator=';'>
+            <column datatype='datetime' name='Fecha' ordinal='0' />
+            <column datatype='integer' name='FK_TipoDato' ordinal='1' />
+            <column datatype='integer' name='Anyo' ordinal='2' />
+            <column datatype='real' name='Valor' ordinal='3' />
+            <column datatype='boolean' name='Secreto' ordinal='4' />
+            <column datatype='string' name='REF_ID_RELACIONAL' ordinal='5' />
+            <column datatype='integer' name='Trimestre' ordinal='6' />
+            <column datatype='real' name='Variacion_Porcentual_Trimestre' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_ES&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Fecha</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Fecha]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>Fecha</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>FK_TipoDato</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FK_TipoDato]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>FK_TipoDato</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Anyo</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Anyo]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>Anyo</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Valor</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Valor]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>Valor</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Secreto</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Secreto]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>Secreto</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>REF_ID_RELACIONAL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[REF_ID_RELACIONAL]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>REF_ID_RELACIONAL</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Trimestre</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Trimestre]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>Trimestre</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Variacion_Porcentual_Trimestre</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Variacion_Porcentual_Trimestre]</local-name>
+            <parent-name>[ipv_Data.csv]</parent-name>
+            <remote-alias>Variacion_Porcentual_Trimestre</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='FK TipoDato' datatype='integer' name='[FK_TipoDato]' role='measure' type='quantitative' />
+      <column caption='Ref Id Relacional' datatype='string' name='[REF_ID_RELACIONAL]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Trimestre]' role='dimension' type='quantitative' />
+      <column caption='Variacion Porcentual Trimestre' datatype='real' name='[Variacion_Porcentual_Trimestre]' role='dimension' type='quantitative' />
+      <column caption='ipv_Data.csv' datatype='table' name='[__tableau_internal_object_id__].[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='es_ES' class='hyper' dbname='C:/Users/raulm/AppData/Local/Temp/TableauTemp/#TableauTemp_02y6tlm068u3p61gx9ufl11729qy.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/22/2026 04:31:11 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Fecha</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Fecha]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Fecha</remote-alias>
+              <ordinal>0</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>76</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>FK_TipoDato</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[FK_TipoDato]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>FK_TipoDato</remote-alias>
+              <ordinal>1</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Anyo</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Anyo]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Anyo</remote-alias>
+              <ordinal>2</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Valor</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Valor]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Valor</remote-alias>
+              <ordinal>3</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1593</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Secreto</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Secreto]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Secreto</remote-alias>
+              <ordinal>4</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>REF_ID_RELACIONAL</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[REF_ID_RELACIONAL]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>REF_ID_RELACIONAL</remote-alias>
+              <ordinal>5</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>260</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Trimestre</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Trimestre]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Trimestre</remote-alias>
+              <ordinal>6</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Variacion_Porcentual_Trimestre</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Variacion_Porcentual_Trimestre]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Variacion_Porcentual_Trimestre</remote-alias>
+              <ordinal>7</ordinal>
+              <family>ipv_Data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2183</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;España&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <_.fcp.ObjectModelSharedDimensions.true...object caption='ipv_Data.csv' id='ipv_Data.csv_F94916FAC89E46D780F8B6F2AB80FE0D'>
+            <properties context=''>
+              <relation connection='textscan.0ysv3df00opj1g14p25200gt8no5' name='ipv_Data.csv' table='[ipv_Data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='es_ES' separator=';'>
+                  <column datatype='datetime' name='Fecha' ordinal='0' />
+                  <column datatype='integer' name='FK_TipoDato' ordinal='1' />
+                  <column datatype='integer' name='Anyo' ordinal='2' />
+                  <column datatype='real' name='Valor' ordinal='3' />
+                  <column datatype='boolean' name='Secreto' ordinal='4' />
+                  <column datatype='string' name='REF_ID_RELACIONAL' ordinal='5' />
+                  <column datatype='integer' name='Trimestre' ordinal='6' />
+                  <column datatype='real' name='Variacion_Porcentual_Trimestre' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </_.fcp.ObjectModelSharedDimensions.true...object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='IPC_Densidad'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Mapa de densidad de IPV</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ipc_principal.csv+ (Varias conexiones)' name='federated.0z3mxrw0wmrz321h63d2r0zflaqr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0z3mxrw0wmrz321h63d2r0zflaqr'>
+            <column datatype='integer' name='[Anyo]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Valor]' role='measure' type='quantitative' />
+            <column-instance column='[Anyo]' derivation='None' name='[none:Anyo:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Valor]' derivation='None' name='[none:Valor:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[none:Anyo:qk]' field-type='quantitative' max='2028' min='2016' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[none:Valor:qk]' field-type='quantitative' max='12.217220654526695' min='-3.6389828705396816' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Heatmap' />
+          </pane>
+        </panes>
+        <rows>[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[none:Valor:qk]</rows>
+        <cols>[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[none:Anyo:qk]</cols>
+      </table>
+      <simple-id uuid='{957B8EBA-6DD8-40B2-8A55-F69A6272196F}' />
+    </worksheet>
+    <worksheet name='IPC_vs_IPV'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Comparación del IPC vs el IPV a lo largo de los Años</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ipc_principal.csv+ (Varias conexiones)' name='federated.0z3mxrw0wmrz321h63d2r0zflaqr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0z3mxrw0wmrz321h63d2r0zflaqr'>
+            <column caption='Fecha (ipv Data.csv)' datatype='datetime' name='[Fecha (ipv_Data.csv)]' role='dimension' type='ordinal' />
+            <column caption='Promedio Trimestral' datatype='real' name='[Promedio_Trimestral]' role='measure' type='quantitative' />
+            <column caption='REF ID RELACIONAL (ipv Data.csv)' datatype='string' name='[REF_ID_RELACIONAL (ipv_Data.csv)]' role='dimension' type='nominal' />
+            <column caption='Variacion Porcentual Trimestre' datatype='real' name='[Variacion_Porcentual_Trimestre]' role='dimension' type='quantitative' />
+            <column-instance column='[Promedio_Trimestral]' derivation='Avg' name='[avg:Promedio_Trimestral:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Variacion_Porcentual_Trimestre]' derivation='Avg' name='[avg:Variacion_Porcentual_Trimestre:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Fecha (ipv_Data.csv)]' derivation='None' name='[none:Fecha (ipv_Data.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[REF_ID_RELACIONAL (ipv_Data.csv)]' derivation='None' name='[none:REF_ID_RELACIONAL (ipv_Data.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Fecha (ipv_Data.csv)]' derivation='Year-Trunc' name='[tyr:Fecha (ipv_Data.csv):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[none:Fecha (ipv_Data.csv):qk]' included-values='in-range'>
+            <min>#2017-09-05 00:00:00#</min>
+            <max>#2025-09-30 22:00:00#</max>
+          </filter>
+          <filter class='categorical' column='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[none:REF_ID_RELACIONAL (ipv_Data.csv):nk]'>
+            <groupfilter function='member' level='[none:REF_ID_RELACIONAL (ipv_Data.csv):nk]' member='&quot;IPV769&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[none:Fecha (ipv_Data.csv):qk]</column>
+            <column>[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[none:REF_ID_RELACIONAL (ipv_Data.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[avg:Promedio_Trimestral:qk]' value='52' />
+            <format attr='width' field='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[avg:Variacion_Porcentual_Trimestre:qk]' value='52' />
+            <format attr='title' class='0' field='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[avg:Variacion_Porcentual_Trimestre:qk]' scope='rows' value='IPV' />
+            <format attr='title' class='0' field='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[avg:Promedio_Trimestral:qk]' scope='rows' value='IPC' />
+            <format attr='display' class='0' field='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[avg:Promedio_Trimestral:qk]' scope='rows' value='true' />
+            <format attr='display' class='0' field='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[avg:Variacion_Porcentual_Trimestre:qk]' scope='rows' value='true' />
+            <encoding attr='space' class='0' field='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[avg:Variacion_Porcentual_Trimestre:qk]' field-type='quantitative' fold='true' max='8.8071391161217765' min='-0.40088440560176047' range-type='fixed' scope='rows' synchronized='true' type='space' />
+            <encoding attr='space' class='0' field='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[tyr:Fecha (ipv_Data.csv):qk]' field-type='quantitative' max='#2025-11-16 10:15:02.682#' min='#2016-01-24 12:26:37.776#' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[avg:Promedio_Trimestral:qk]' field-type='quantitative' max='8.8071391161217765' min='-0.40088440560176047' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#4e79a7' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[avg:Variacion_Porcentual_Trimestre:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='auto' />
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#4e79a7' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='10' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#4e79a7' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[avg:Promedio_Trimestral:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='auto' />
+                <format attr='text-align' value='center' />
+                <format attr='wrap' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='font-size' value='10' />
+                <format attr='font-weight' value='bold' />
+                <format attr='color' value='#e15759' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#e15759' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0z3mxrw0wmrz321h63d2r0zflaqr].[avg:Promedio_Trimestral:qk] + [federated.0z3mxrw0wmrz321h63d2r0zflaqr].[avg:Variacion_Porcentual_Trimestre:qk])</rows>
+        <cols>[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[tyr:Fecha (ipv_Data.csv):qk]</cols>
+      </table>
+      <simple-id uuid='{40597B33-BE9F-4D61-B10A-078191CF5AF7}' />
+    </worksheet>
+    <worksheet name='IPV_Año'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>IPV valor total del año</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ipc_principal.csv+ (Varias conexiones)' name='federated.0z3mxrw0wmrz321h63d2r0zflaqr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0z3mxrw0wmrz321h63d2r0zflaqr'>
+            <column caption='Anyo (ipv Data.csv)' datatype='integer' name='[Anyo (ipv_Data.csv)]' role='measure' type='quantitative' />
+            <column caption='Trimestre (ipv Data.csv)' datatype='integer' name='[Trimestre (ipv_Data.csv)]' role='dimension' type='quantitative' />
+            <column caption='Valor (ipv Data.csv)' datatype='real' name='[Valor (ipv_Data.csv)]' role='measure' type='quantitative' />
+            <column-instance column='[Anyo (ipv_Data.csv)]' derivation='None' name='[none:Anyo (ipv_Data.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Trimestre (ipv_Data.csv)]' derivation='None' name='[none:Trimestre (ipv_Data.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Valor (ipv_Data.csv)]' derivation='Sum' name='[sum:Valor (ipv_Data.csv):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[none:Trimestre (ipv_Data.csv):qk]' palette='red_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[none:Trimestre (ipv_Data.csv):qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[sum:Valor (ipv_Data.csv):qk]</rows>
+        <cols>[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[none:Anyo (ipv_Data.csv):qk]</cols>
+      </table>
+      <simple-id uuid='{3A7E5913-DAE4-4666-9C51-CF33CC8F426F}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Datos del IPC e IPV</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size minheight='560' minwidth='420' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98214' id='20' param='vert' type-v2='layout-flow' w='99064' x='468' y='893'>
+            <zone h='4576' id='21' type-v2='title' w='99064' x='468' y='893'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='93638' id='18' param='vert' type-v2='layout-flow' w='99064' x='468' y='5469'>
+              <zone h='93638' id='16' type-v2='layout-basic' w='99064' x='468' y='5469'>
+                <zone h='93638' id='7' param='horz' type-v2='layout-flow' w='42438' x='468' y='5469'>
+                  <zone h='93638' id='5' type-v2='layout-basic' w='42438' x='468' y='5469'>
+                    <zone h='46816' id='3' name='IPV_Año' w='42438' x='468' y='5469'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='46822' id='13' name='IPC_Densidad' w='42438' x='468' y='52285'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+                <zone h='87022' id='9' name='IPC_vs_IPV' w='56626' x='42906' y='5469'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='6616' id='10' type-v2='text' w='56626' x='42906' y='92491'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#e15759' fontsize='12'>IPC = Rojo</run>
+                    <run bold='true' fontalignment='1' fontcolor='#4e79a7' fontsize='12'>Æ </run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='18'>|</run>
+                    <run bold='true' fontalignment='1' fontcolor='#4e79a7' fontsize='12'> IPV = Azul</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true'>Datos del IPC e IPV</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='25' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98214' id='24' param='vert' type-v2='layout-flow' w='99064' x='468' y='893'>
+                <zone h='4576' id='21' type-v2='title' w='99064' x='468' y='893'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='254' h='46816' id='3' is-fixed='true' name='IPV_Año' w='42438' x='468' y='5469'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='87022' id='9' is-fixed='true' name='IPC_vs_IPV' w='56626' x='42906' y='5469'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='254' h='46822' id='13' is-fixed='true' name='IPC_Densidad' w='42438' x='468' y='52285'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='6616' id='10' type-v2='text' w='56626' x='42906' y='92491'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#e15759' fontsize='12'>IPC = Rojo</run>
+                    <run bold='true' fontalignment='1' fontcolor='#4e79a7' fontsize='12'>Æ </run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='18'>|</run>
+                    <run bold='true' fontalignment='1' fontcolor='#4e79a7' fontsize='12'> IPV = Azul</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F420DC09-AB9E-404A-AA98-68860FC7A4FD}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='51'>
+    <window class='worksheet' maximized='true' name='IPV_Año'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='173'>
+            <card pane-specification-id='0' param='[federated.0z3mxrw0wmrz321h63d2r0zflaqr].[none:Trimestre (ipv_Data.csv):qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{542D2D9D-81F7-4410-8F83-CDCB414EF89A}' />
+    </window>
+    <window class='worksheet' name='IPC_vs_IPV'>
+      <cards>
+        <edge name='left'>
+          <strip size='272'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <floating-toolbar-visibility value='2' />
+      </viewpoint>
+      <simple-id uuid='{55E6EA59-838E-4355-AB4E-56C00747B3FC}' />
+    </window>
+    <window class='worksheet' name='IPC_Densidad'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BAC8B7EB-CB1B-4E12-84E0-40E48863D3DD}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='IPC_Densidad'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='IPC_vs_IPV'>
+          <floating-toolbar-visibility value='2' />
+        </viewpoint>
+        <viewpoint name='IPV_Año'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{38E46297-CFAF-4768-8CDD-F49262D9342E}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      V9sUQnLr/H+YqW6vn+4EOgAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='IPV_Año' width='192'>
+      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
+      fXj6KVg7tP9/HmMRxk5KOcoAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
